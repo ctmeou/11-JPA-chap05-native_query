@@ -105,7 +105,7 @@ public class NativeQueryTests {
 
         // then
         assertNotNull(categoryList);
-        assertTrue(entityManager.contains(categoryList.get(0)[0])); //categoryList가 영속성인지 확인 -> test 성공(= 엔티티는 영속성 컨테니에서 관리되고 있다.)
+        assertTrue(entityManager.contains(categoryList.get(0)[0])); //categoryList가 영속성인지 확인 -> test 성공(= 엔티티는 영속성 매니저에서 관리되고 있다.)
         categoryList.forEach(row -> {
             Stream.of(row).forEach(col -> System.out.print(col + " "));
             System.out.println();
